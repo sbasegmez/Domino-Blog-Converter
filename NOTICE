@@ -1,0 +1,13 @@
+DominoBlog Converter
+
+Copyright 2025 Serdar Basegmez
+
+This product is licensed under the terms of the Apache 2.0 license.
+
+The project contains the following third-party code:
+
+The binary distribution contains the following third-party code:
+
+- Flexmark Java, which is copyright Atlassian Pty Ltd and Vladimir Schneider, licensed under the BSD license, and available from https://github.com/vsch/flexmark-java
+- Domino JNX, which is copyright HCL America, licensed under the Apache 2.0 license, and available from https://github.com/HCL-TECH-SOFTWARE/domino-jnx
+- Apache Commons Library, which is copyright The Apache Software Foundation, licensed under the Apache 2.0 license, and available from https://commons.apache.org/

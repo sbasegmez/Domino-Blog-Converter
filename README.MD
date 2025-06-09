@@ -1,6 +1,6 @@
-# Domino Blog Exporter
+# Domino Blog Converter
 
-A small Java console application to migrate blog posts from an HCL Domino blog template to MkDocs (or other Markdown-based platforms).&#x20;
+A small Java console application to migrate blog posts from an HCL Domino blog template to MkDocs (or other Markdown-based platforms).
 
 ## Features
 
@@ -23,8 +23,8 @@ A small Java console application to migrate blog posts from an HCL Domino blog t
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/sbasegmez/domino-blog-exporter.git
-   cd domino-blog-exporter
+   git clone https://github.com/sbasegmez/Domino-Blog-Converter.git
+   cd Domino-Blog-Converter
    ```
 
 2. Build the project with Maven:
@@ -51,7 +51,7 @@ Before running, set the following environment variables in your shell or IDE run
 | `Notes_IDPath`        | (Optional) Full path to a Notes ID file (for passworded ID switching).     | `/Users/jane/notes.id`                                   |
 | `Notes_IDPassword`    | (Optional) Password for the ID file specified above.                       | `mypassword`                                             |
 
-> **Note**: On macOS, system protections will not let you set system-wide parameter for  `DYLD_LIBRARY_PATH`. Define it in-session or within your IDE run configuration.
+> **Note**: On macOS, system protections will not let you set system-wide parameter for `DYLD_LIBRARY_PATH`. Define it in-session or within your IDE run configuration.
 
 ## Running the Application
 

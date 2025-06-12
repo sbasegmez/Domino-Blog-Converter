@@ -197,16 +197,22 @@ public class BlogConverter {
             slug = slug.substring(0, slug.length() - 4);
         }
         List<String> tags = doc.getAsList("CustomTags", String.class, List.of());
+        String category = doc.getAsText("CustomCategory", ' ');
 
         sb.append("---\n")
           .append("authors:\n").append("  - "). append(AUTHOR_NAME).append("\n\n")
           .append("title: \"").append(title.replace("\"", "\\\"")).append("\"\n\n")
           .append("slug: ").append(slug).append("\n\n")
-          .append("categories:\n").append("  - ").append(doc.getAsText("CustomCategory", ' ')).append("\n\n")
-          .append("date: ").append(dateFormatted).append("\n\n")
-          .append("tags:\n");
+          .append("date: ").append(dateFormatted).append("\n\n");
 
-        tags.forEach(tag -> sb.append("  - ").append(tag).append("\n"));
+        if(StringUtils.isNotEmpty(category)) {
+            sb.append("categories:\n").append("  - ").append(doc.getAsText("CustomCategory", ' ')).append("\n\n");
+        }
+
+        if(!tags.isEmpty() && StringUtils.isNotEmpty(tags.get(0))) {
+            sb.append("tags:\n");
+            tags.forEach(tag -> sb.append("  - ").append(tag).append("\n"));
+        }
 
         sb.append("---\n\n");
 
